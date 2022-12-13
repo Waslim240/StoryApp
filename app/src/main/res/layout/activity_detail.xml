@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green_sea"
+    tools:context=".view.activity.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/iv_detail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="40dp"
+            tools:src="@tools:sample/avatars"
+            app:siBorderColor="@color/jingga"
+            app:siBorderWidth="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/gambar_story"
+            android:transitionName="iv_detail"/>
+
+        <TextView
+            android:id="@+id/tv_name_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            tools:text="@string/name"
+            android:textStyle="bold"
+            android:textColor="@color/jingga"
+            android:textSize="18sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail"
+            android:transitionName="tv_name_detail"/>
+
+        <TextView
+            android:id="@+id/tv_description_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            tools:text="@string/description"
+            android:textAlignment="center"
+            android:textColor="@color/jingga"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_detail"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_detail"
+            android:transitionName="tv_description_detail"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progress_bar_login"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/file_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

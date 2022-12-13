@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textDarkMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/mode_dark"
+            android:textColor="@color/jingga"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_mode_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textDarkMode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textDarkMode" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bahasa"
+            android:textColor="@color/jingga"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/button_ganti"
+            app:layout_constraintStart_toStartOf="@+id/textDarkMode"
+            app:layout_constraintTop_toTopOf="@+id/button_ganti" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_ganti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ganti"
+            app:layout_constraintEnd_toEndOf="@+id/switch_mode_dark"
+            app:layout_constraintTop_toBottomOf="@+id/switch_mode_dark" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
